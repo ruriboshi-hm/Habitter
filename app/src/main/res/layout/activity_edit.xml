@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity"
+    android:id="@+id/editLayout"
+    android:background="#E6FAFB">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#ffffff"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start">
+
+                <TextView
+                    android:id="@+id/ToolbarTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:text="習慣を作成"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/save_habit"
+                    android:layout_width="95dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="18dp"
+                    android:backgroundTint="#ACF2F8"
+                    android:textColor="#2E2E2E"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:stateListAnimator="@drawable/icon_settings"
+                    android:elevation="3dp"
+                    android:text="@string/save"/>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp">
+
+        <LinearLayout
+            android:id="@+id/editLayoutBackground"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="18sp"
+                android:text="@string/habit"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="10dp">
+
+                <EditText
+                    android:id="@+id/edit_habit_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingStart="5dp"
+                    android:minHeight="50dp"
+                    android:maxLines="1"
+                    android:hint="@string/habitHint"
+                    tools:ignore="RtlSymmetry" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remind"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="18sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/remind_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/remind_date_1"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="07:00"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="24sp"/>
+
+                        <ImageButton
+                            android:id="@+id/cancel_remind_Btn1"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#00ffffff"
+                            android:contentDescription="@string/deleteReminder1"
+                            android:layout_marginStart="12dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            app:srcCompat="@drawable/cancel_icon" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/remind_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/remind_date_2"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="07:00"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="24sp"/>
+
+                        <ImageButton
+                            android:id="@+id/cancel_remind_Btn2"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#00ffffff"
+                            android:contentDescription="@string/deleteReminder2"
+                            android:layout_marginStart="12dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            app:srcCompat="@drawable/cancel_icon" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/remind_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/remind_date_3"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="07:00"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="24sp"/>
+
+                        <ImageButton
+                            android:id="@+id/cancel_remind_Btn3"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#00ffffff"
+                            android:contentDescription="@string/deleteReminder3"
+                            android:layout_marginStart="12dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            app:srcCompat="@drawable/cancel_icon" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/add_remind_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2E2E2E"
+                        android:textSize="18sp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:backgroundTint="#ACF2F8"
+                        android:text="@string/addRemind"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/icon"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="18sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/iconView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="100dp"
+                        android:layout_marginEnd="12dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" >
+
+                        <ImageView
+                            android:id="@+id/iconImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:background="#5FF3FF"
+                            app:srcCompat="@drawable/app_mainicon"
+                            android:contentDescription="@string/iconImageView" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:id="@+id/changeIconBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/changeIcon"
+                        android:textColor="#2E2E2E"
+                        android:backgroundTint="#ACF2F8"
+                        android:textSize="14sp"
+                        android:stateListAnimator="@drawable/icon_settings"
+                        android:elevation="3dp"
+                        android:minHeight="50dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/color"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="18sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:id="@+id/color_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/color_red"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:elevation="3dp"
+                            android:background="@drawable/color_shape"
+                            android:backgroundTint="#DA1100"
+                            android:contentDescription="@string/red" />
+
+                        <ImageButton
+                            android:id="@+id/color_orange"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:elevation="3dp"
+                            android:background="@drawable/color_shape"
+                            android:backgroundTint="#ff5c19"
+                            android:contentDescription="@string/orange" />
+
+                        <ImageButton
+                            android:id="@+id/color_yellow"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="12dp"
+                            android:elevation="3dp"
+                            android:background="@drawable/color_shape"
+                            android:backgroundTint="#FFDF19"
+                            android:contentDescription="@string/yellow" />
+
+                        <ImageButton
+                            android:id="@+id/color_pink"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:elevation="3dp"
+                            android:background="@drawable/color_shape"
+                            android:backgroundTint="#ffa2c9"
+                            android:contentDescription="@string/pink" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout2"
+                        android:layout_marginTop="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/color_layout"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/color_blue"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="12dp"
+                            android:elevation="3dp"
+                            android:background="@drawable/color_shape"
+                            android:backgroundTint="#0096FF"
+                            android:contentDescription="@string/blue" />
+
+                        <ImageButton
+                            android:id="@+id/color_skyblue"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="12dp"
+                            android:elevation="3dp"
+                            android:contentDescription="@string/lightBlue"
+                            android:background="@drawable/color_shape"
+                            android:backgroundTint="#1becff"/>
+
+                        <ImageButton
+                            android:id="@+id/color_green"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="12dp"
+                            android:elevation="3dp"
+                            android:contentDescription="@string/green"
+                            android:background="@drawable/color_shape"
+                            android:backgroundTint="#18c586"/>
+
+                        <ImageButton
+                            android:id="@+id/color_yellowgreen"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:elevation="3dp"
+                            android:contentDescription="@string/yellowGreen"
+                            android:background="@drawable/color_shape"
+                            android:backgroundTint="#7FEC44"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout3"
+                        android:layout_marginTop="24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/layout2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/color_purple"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="12dp"
+                            android:elevation="5dp"
+                            android:contentDescription="@string/purple"
+                            android:background="@drawable/color_shape"
+                            android:backgroundTint="#8218ff"/>
+
+                        <ImageButton
+                            android:id="@+id/color_brawn"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="12dp"
+                            android:elevation="5dp"
+                            android:contentDescription="@string/brawn"
+                            android:background="@drawable/color_shape"
+                            android:backgroundTint="#DD8C50"/>
+
+                        <ImageButton
+                            android:id="@+id/color_white"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginEnd="12dp"
+                            android:elevation="5dp"
+                            android:contentDescription="@string/white"
+                            android:background="@drawable/color_shape"
+                            android:backgroundTint="#F4F4F4"/>
+
+                        <ImageButton
+                            android:id="@+id/color_black"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:elevation="5dp"
+                            android:background="@drawable/color_shape"
+                            android:backgroundTint="#373737"
+                            android:contentDescription="@string/black" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/message"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="18sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/remind_comment_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/remind_comment_text_1"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="24dp"
+                            android:minHeight="48dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:hint="@string/messageHint"
+                            android:maxLength="30"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <ImageButton
+                            android:id="@+id/cancel_remind_Comment1"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#00ffffff"
+                            android:contentDescription="@string/cancelMessage"
+                            android:layout_marginStart="12dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            app:srcCompat="@drawable/cancel_icon" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/remind_comment_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/remind_comment_text_2"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:hint="@string/messageHint"
+                            android:maxLength="30"
+                            android:maxLines="3"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <ImageButton
+                            android:id="@+id/cancel_remind_Comment2"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#00ffffff"
+                            android:contentDescription="@string/cancelMessage"
+                            android:layout_marginStart="12dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            app:srcCompat="@drawable/cancel_icon" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/remind_comment_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/remind_comment_text_3"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:hint="@string/messageHint"
+                            android:maxLength="30"
+                            android:maxLines="3"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <ImageButton
+                            android:id="@+id/cancel_remind_Comment3"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#00ffffff"
+                            android:contentDescription="@string/cancelMessage"
+                            android:layout_marginStart="12dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            app:srcCompat="@drawable/cancel_icon" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/add_remind_comment_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2E2E2E"
+                        android:textSize="18sp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:backgroundTint="#ACF2F8"
+                        android:text="@string/addMessage"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comment"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="18sp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/finish_comment_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/finish_comment_text_1"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:hint="@string/commentHint"
+                            android:maxLength="30"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <ImageButton
+                            android:id="@+id/cancel_finish_Com1"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#00ffffff"
+                            android:contentDescription="@string/cancelComment1"
+                            android:layout_marginStart="12dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            app:srcCompat="@drawable/cancel_icon" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/finish_comment_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/finish_comment_text_2"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:hint="@string/commentHint"
+                            android:maxLength="30"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <ImageButton
+                            android:id="@+id/cancel_finish_Com2"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#00ffffff"
+                            android:contentDescription="@string/cancelComment2"
+                            android:layout_marginStart="12dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            app:srcCompat="@drawable/cancel_icon" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/finish_comment_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/finish_comment_text_3"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="24dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:hint="@string/commentHint"
+                            android:maxLength="30"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:textSize="18sp"/>
+
+                        <ImageButton
+                            android:id="@+id/cancel_finish_Com3"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#00ffffff"
+                            android:contentDescription="@string/cancelComment3"
+                            android:layout_marginStart="12dp"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:minWidth="48dp"
+                            android:minHeight="48dp"
+                            app:srcCompat="@drawable/cancel_icon" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/add_finish_comment_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#2E2E2E"
+                        android:textSize="18sp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:backgroundTint="#ACF2F8"
+                        android:text="@string/addComment"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/deleteHabitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/delete"
+                android:backgroundTint="#ACF2F8"
+                android:textColor="#FF0000"
+                android:layout_marginBottom="120dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView_edit"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/ad_banner_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

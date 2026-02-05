@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Habitter</string>
+    <string name="noHabit">まだ習慣がありません。\n＋ボタンから習慣を追加しましょう。</string>
+    <string name="allFinished">未完了の習慣はありません。\nお疲れ様でした。</string>
+    <string name="habitList">習慣一覧</string>
+    <string name="addBtn">習慣を追加</string>
+    <string name="filterBtn">表示する習慣を選択</string>
+    <string name="settingsBtn">設定</string>
+    <string name="noImage">画像</string>
+    <string name="save">保存</string>
+    <string name="habit">習慣</string>
+    <string name="habitHint">習慣化したいことを入力</string>
+    <string name="remind">リマインダー</string>
+    <string name="deleteReminder1">１つ目のリマインダーを削除</string>
+    <string name="deleteReminder2">2つ目のリマインダーを削除</string>
+    <string name="deleteReminder3">3つ目のリマインダーを削除</string>
+    <string name="addRemind">リマインダーを追加　+</string>
+    <string name="icon">アイコン</string>
+    <string name="iconImageView">アイコン画像</string>
+    <string name="changeIcon">アイコン画像を変更</string>
+    <string name="color">色</string>
+    <string name="red">赤</string>
+    <string name="orange">オレンジ</string>
+    <string name="yellow">黄色</string>
+    <string name="pink">ピンク</string>
+    <string name="blue">青</string>
+    <string name="lightBlue">水色</string>
+    <string name="green">緑</string>
+    <string name="yellowGreen">黄緑</string>
+    <string name="purple">紫</string>
+    <string name="brawn">茶色</string>
+    <string name="white">白</string>
+    <string name="black">黒</string>
+    <string name="message">リマインダーのメッセージ</string>
+    <string name="messageHint">通知に表示するメッセージ</string>
+    <string name="cancelMessage">メッセージを削除</string>
+    <string name="addMessage">メッセージを追加　+</string>
+    <string name="comment">習慣完了後のコメント</string>
+    <string name="cancelComment1">１つ目のコメントを削除</string>
+    <string name="cancelComment2">２つ目のコメントを削除</string>
+    <string name="cancelComment3">３つ目のコメントを削除</string>
+    <string name="commentHint">コメントを入力</string>
+    <string name="addComment">コメントを追加　+</string>
+    <string name="delete">習慣を削除する</string>
+    <string name="nextMonth">次の月</string>
+    <string name="previousMonth">前の月</string>
+    <string name="back">戻る</string>
+    <string name="edit">習慣を編集</string>
+    <string name="howToUse">このアプリの使い方</string>
+    <string name="writeReview">レビューを書く</string>
+    <string name="privacyPolicy">プライバシーポリシー</string>
+    <string name="reportBugs">不具合を報告</string>
+    <!--テスト用広告ID：ca-app-pub-3940256099942544/6300978111　-->
+    <!--EDIT本番用広告ID：ca-app-pub-1123489925024997/6540150747　-->
+    <string name="ad_banner_list">ca-app-pub-1123489925024997/8296085540</string>
+    <string name="ad_banner_edit">ca-app-pub-1123489925024997/6540150747</string>
+    <string name="ad_banner_habit">ca-app-pub-1123489925024997/9196962039</string>
+</resources>

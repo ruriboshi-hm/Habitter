@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        app:title="@string/howToUse"
+        app:key="howToUse">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://sites.google.com/view/ruriboshi/habitter"/>
+    </Preference>
+
+    <Preference
+        app:title="@string/writeReview"
+        app:key="writeReview">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://play.google.com/store/apps/details?id=com.ruriboshi.habitter"/>
+    </Preference>
+
+    <Preference
+        app:title="@string/reportBugs"
+        app:key="reportBugs">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://ruriboshi-project.web.app"/>
+    </Preference>
+
+    <Preference
+        app:title="@string/privacyPolicy"
+        app:key="policy">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://sites.google.com/view/ruriboshi/habitter/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC"/>
+    </Preference>
+
+</PreferenceScreen>

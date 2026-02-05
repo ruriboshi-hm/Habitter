@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#003249</color>
+    <color name="white">#0BBE11</color>
+    <color name="pink">#FF77CA</color>
+    <color name="background_pink">#FFE0F3</color>
+    <color name="progressbar_before">#FFAAABAE</color>
+    <color name="progressbar_red">#DA1100</color>
+    <color name="red">#F44336</color>
+</resources>
