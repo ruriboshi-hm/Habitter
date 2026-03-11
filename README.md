@@ -1,5 +1,7 @@
 # Habitter
 
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/c5708fac-b353-41a2-ba55-8f180af1eb7d" />
+
 ### 概要
 推しに応援してもらう気分を味わえる習慣管理アプリ。
 ### 開発環境/技術選定理由
